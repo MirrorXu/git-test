@@ -10,5 +10,8 @@
 - 	`git add .` / `git add *`  (添加所有文件)
 - 	`git status`  (查看当前状态)
 -	`git commit -m < 描述内容 >` (提交并添加描述)
+-	`git log`  (显示从最近到最远的提交日志)
+- 	`git log --pretty=oneline` (以单行显示从最近到最远的提交日志)
+
 -	`git reset --hard head^`    (回退至上一版本)
 -	`git reset --hard head~100`  (回退100个历史版本)
