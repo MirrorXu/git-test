@@ -14,4 +14,6 @@
 - 	`git log --pretty=oneline` (以单行显示从最近到最远的提交日志)
 
 -	`git reset --hard head^`    (回退至上一版本)
--	`git reset --hard head~100`  (回退100个历史版本)
+-	`git reset --hard head~100` (回退100个历史版本)
+-	`git reset --hard commit_id` (回退到指定版本)
+-	`git reflog `  (查看历史命令)
