@@ -23,5 +23,13 @@ some new
 
 add  new message 
 
-edit git config  	` git config --global user.name"Mirror" `   `git config --global user.email"xuxulee@163.com"`
+edit git config  	
+
+` git config --global user.name"Mirror" ` 
+
+`git config --global user.email"xuxulee@163.com"`
+
+set git global config user.name  by other peoject
+
+
 
