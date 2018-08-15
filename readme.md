@@ -56,6 +56,8 @@
 	-	关联后，使用命令`git push -u origin master`第一次推送master分支的所有内容；
 
 	-	此后，每次本地提交后，只要有必要，就可以使用命令`git push origin master`推送最新修改；
+
+
 	
 
 
@@ -100,6 +102,17 @@
 	git branch命令会列出所有分支，当前分支前面会标一个*号。
 
 
+	在`dev`分支修改内容并正常提交。
+
+	`$ git checkout master` 切换回 `master`分支。
+
+	`git log ` 发现master 分支上的文件并没有被修改。
+
+	`git merge dev`  将`dev` 分支合并到当前 `master` 分支，`git log --oneline ` 发现 最新的一条提交记录为 	`b6b63a6 (HEAD -> master, dev) edit readme.md in dev branch`  (dev 分支与 master 分支合并)，并且在`dev` 分支上的修改已经合并到`master` 分支上。
+
+	`git branch -d dev` 删除 `dev` 分支。
+
+	
 
 
 
