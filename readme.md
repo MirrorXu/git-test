@@ -41,4 +41,5 @@ set git global config user.name  by other peoject
 now , at this project i set git config user.name is "xupenglai"  but  global  config user.name is 'Mirror'
 
 
+add a new paragraph
 
