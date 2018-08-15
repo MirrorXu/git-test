@@ -24,6 +24,10 @@
 
 -	`git checkout -- <filename>`
 
+>	当我们将一些错误的修改提交到暂存区，但并没有commit , 此时我们可以通过`git reset head <file>` 来撤销暂存区的修改（清空了暂存区！）， 但是你在文件中作出的修改并没有被删除，可以通过修改不合适的 地方，然后重新add到暂存区。
+
+- `git reset head <file>` 将暂存区清空，并保留了用户的add到暂存区之前的修改来让用户进一步修改。
+
 
 some new
 
@@ -42,4 +46,6 @@ now , at this project i set git config user.name is "xupenglai"  but  global  co
 
 
 add a new paragraph
+
+
 
