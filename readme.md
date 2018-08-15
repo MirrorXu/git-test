@@ -112,6 +112,10 @@
 
 	`git branch -d dev` 删除 `dev` 分支。
 
+	`git branch` 查看分支。 只剩下 `* master` 分支。
+
+	
+
 	
 
 
