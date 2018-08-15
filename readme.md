@@ -49,8 +49,35 @@
 	Please make sure you have the correct access rights
 	and the repository exists.
 	```
+- **小结：**
 
+	-	要关联一个远程库，使用命令`git remote add origin git@server-name:path/repo-name.git`；
+
+	-	关联后，使用命令`git push -u origin master`第一次推送master分支的所有内容；
+
+	-	此后，每次本地提交后，只要有必要，就可以使用命令`git push origin master`推送最新修改；
 	
+
+
+##  从远程仓克隆
+
+-	`git clone <https/ssh>`
+
+-	要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。
+
+-	Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
+-	ssh 和 https区别
+	-	https 协议比 ssh 协议慢
+	-	https 协议克隆的仓库，每次提交都需要输入账号和密码
+	-	ssh需要在客户端生成相应文件，然后将公钥添加至github的ssh中，这样就能够免密push代码了
+
+
+
+
+
+
+
+
 
 
 
