@@ -17,3 +17,6 @@
 -	`git reset --hard head~100` (回退100个历史版本)
 -	`git reset --hard commit_id` (回退到指定版本)
 -	`git reflog `  (查看历史命令)
+
+
+some new
