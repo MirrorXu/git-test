@@ -39,9 +39,18 @@
 
 ## 添加远程库
 
-	-	删除了github 中的公钥 ， 此时还能够能够push到github上吗？
-	-	
+-	删除了github 中的公钥 ， 此时还能够能够push到github上吗？
+-	删除了github远程仓的 ssh公钥，无法push. 错误提示如下：
+	```
+	$ git push origin master
+	Permission denied (publickey).
+	fatal: Could not read from remote repository.
 
+	Please make sure you have the correct access rights
+	and the repository exists.
+	```
+
+	
 
 
 
