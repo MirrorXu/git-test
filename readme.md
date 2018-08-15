@@ -18,6 +18,12 @@
 -	`git reset --hard commit_id` (回退到指定版本)
 -	`git reflog `  (查看历史命令)
 
+## 撤销修改
+
+> 撤销修改就是将修改恢复到 上一次的 暂存区状态 ， 用于版本在没有commit 之前  ，如果已经commit ，恢复的方法只能是通过 `git reset --hard xxx`
+
+-	`git checkout -- <filename>`
+
 
 some new
 
