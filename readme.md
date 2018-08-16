@@ -129,8 +129,69 @@
 
 
 ## 解决冲突
+
+	// 添加并跳转至 dev 分支
+
+	$ git checkout -b dev	
 	
-	现在是在master 分支， 由feature1 分支checkout 而来
+	// 添加并跳转至 feature1 分支
+
+	$ git checkout -b feature1
+
+	// feature1 分支上 ， 修改readme.md
+
+	// 在 feature1 分支上提交
+	
+	$ git commit -a -m "commit new notes in readme.md "
+
+	// 切换到master分支 , Git还会自动提示我们当前master分支比远程的master分支要超前1个提交。
+		
+	$ git checkout master
+	Switched to branch 'master'
+	Your branch is ahead of 'origin/master' by 1 commit.
+
+	// 修改readme.md 然后提交
+
+	$ git commit -a -m "update readme.md at branch master"
+	
+	//将feature1 分支合并是 master 分支
+
+	$ git merge feature1
+	Auto-merging readme.md
+	CONFLICT (content): Merge conflict in readme.md
+	Automatic merge failed; fix conflicts and then commit the result.
+
+
+	// git status 查看冲突
+	
+	$ git status
+	On branch master
+	Your branch is ahead of 'origin/master' by 2 commits.
+  		(use "git push" to publish your local commits)
+
+	You have unmerged paths.
+  		(fix conflicts and run "git commit")
+  		(use "git merge --abort" to abort the merge)
+
+	Unmerged paths:
+  		(use "git add <file>..." to mark resolution)
+
+        		both modified:   readme.md
+
+
+	// 直接查看冲突的文件 readme.md ， Git用<<<<<<<，=======，>>>>>>>标记出不同分支的内容，我们修改如下后保存
+
+	// 根据自身的需求对 readme.md 进行修改 , 提交
+		
+	$ git add readme.md	
+	$ git commit -m "conflict fixed"
+
+
+
+
+
+	```
+
 	
 
 
