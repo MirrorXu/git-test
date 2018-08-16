@@ -213,10 +213,15 @@
 
 	```
 
+## 分支管理策略
 
-## 在dev分支上编辑一些内容
+> 通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
+> 下面实战一下--no-ff方式的git merge：
 
-##  此时master分支已经commit ，然后再进一步修改master分支上的readme.md
-	
-
+	-	首先，仍然创建并切换dev分支
+	```
+	git checkout -b dev
+	``` 	
+	-	修改readme.md 并提交新的commit
+	`git commit -a -m "add merge" `
 
