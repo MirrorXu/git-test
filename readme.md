@@ -130,6 +130,27 @@
 
 ## 解决冲突
 
+	```js
+
+	// 添加并跳转至 dev 分支
+
+	$ git checkout -b dev	
+	
+	// 添加并跳转至 feature1 分支
+
+	$ git checkout -b feature1
+
+	// feature1 分支上 ， 修改readme.md
+
+	// 在 feature1 分支上提交
+	
+	$ git commit -a -m "commit new notes in readme.md "
+
+	// 切换到dev分支 , Git还会自动提示我们当前master分支比远程的master分支要超前1个提交。
+
+
+	```
+
 	
 
 
