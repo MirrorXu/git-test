@@ -127,36 +127,9 @@
 
 	-	删除分支：`git branch -d <name>`
 
+
+## 解决冲突
+
 	
-
-
-
-
-
-
-
-
-
-some new
-
-add  new message 
-
-edit git config  	
-
-` git config --global user.name"Mirror" ` 
-
-`git config --global user.email"xuxulee@163.com"`
-
-set git global config user.name  by other peoject
-
-
-now , at this project i set git config user.name is "xupenglai"  but  global  config user.name is 'Mirror'
-
-
-add a new paragraph
-
-
-
-
 
 
