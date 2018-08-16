@@ -4,7 +4,7 @@
 >	Git is free software.
 
 
-## some err
+## 常用命令
 
 - 	`git add <filename>`  (添加文件)
 - 	`git add .` / `git add *`  (添加所有文件)
