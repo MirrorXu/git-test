@@ -215,6 +215,8 @@
 
 
 ## 在dev分支上编辑一些内容
+
+##  此时master分支已经commit ，然后再进一步修改master分支上的readme.md
 	
 
 
