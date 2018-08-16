@@ -185,9 +185,19 @@
 		
 	$ git add readme.md	
 	$ git commit -m "conflict fixed"
+	
+	// 用带参数的git log也可以看到分支的合并情况
 
-
-
+	$  git log --graph --pretty=oneline --abbrev-commit
+	*   e648320 (HEAD -> master) fixed conflict
+	|\
+	| * 4b39867 (feature1) update notes in readme.md
+	* | 706a25f update readme.md in branch master
+	|/
+	* aa9cf3a (dev) 开始学习解决分支之间的冲突
+	* 9a13418 (origin/master) readme.md  新增小结
+	* 7b21023 add some new notes  to readme.md
+	*...
 
 
 	```
