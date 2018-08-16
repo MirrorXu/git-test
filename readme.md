@@ -4,7 +4,7 @@
 >	Git is free software.
 
 
-## some err
+## 常用命令
 
 - 	`git add <filename>`  (添加文件)
 - 	`git add .` / `git add *`  (添加所有文件)
@@ -268,5 +268,86 @@ $ git log --graph --oneline --abbrev-commit
 
 你和你的小伙伴们每个人都在dev分支上干活，每个人都有自己的分支，时不时地往dev分支上合并就可以了。
 
+
+
+
+## Bug 分支 
+
+软件开发中，bug就像家常便饭一样。有了bug就需要修复，在Git中，由于分支是如此的强大，所以，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。
+
+当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它，但是，等等，当前正在dev上进行的工作还没有提交：
+
+并不是你不想提交，而是工作只进行到一半，还没法提交，预计完成还需1天时间。但是，必须在两个小时内修复该bug，怎么办？
+
+幸好，Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+
+```js
+$ git status
+On branch xu
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.md
+
+
+$ git stash
+Saved working directory and index state WIP on xu: 0e1ddb0 merge from xu
+
+
+$ git status
+On branch xu
+nothing to commit, working tree clean
+
+```
+
+
+首先确定要在哪个分支上修复bug，假定需要在master分支上修复，就从master创建临时分支：
+
+```
+$ git checkout dev
+
+// 创建新的fix分支
+$ git checkout -b fix
+
+
+// 在fix分支上修复bug，然后commit
+
+$ git commit -a -m "fixed  bug"
+
+// 切换到dev分支，合并，删除fix分支
+
+$ git checkout dev
+
+$ git merge --no-ff -m "merged bug fix " fix
+
+$ git branch -d fix
+
+```
+
+回到dev分支继续自己的开发
+
+```js
+
+$ git checkout dev
+
+$ git status 
+On branch dev
+nothing to commit, working tree clean
+
+
+// 查看隐藏的工作现场
+$  git stash list 
+stash@{0}: WIP on xu: f52c633 add merge
+
+// 恢复工作现场
+$ git stash apply stash@{0}
+
+// 删除隐藏
+$ git stash drop
+
+```
+
+`git stash pop`，恢复的同时把stash内容也删除.
 
 
