@@ -129,7 +129,8 @@
 
 
 ## 解决冲突
-
+	
+	现在是在master 分支， 由feature1 分支checkout 而来
 	
 
 
