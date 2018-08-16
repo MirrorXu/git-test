@@ -199,6 +199,17 @@
 	* 7b21023 add some new notes  to readme.md
 	*...
 
+	
+	// 到 feature1 分支，发现该分支上并没有因为master分支的合并而改变
+	$ git checkout feature1
+
+	// ????  此时是否能够通过命令将feature1分支与master分支同步一下？
+
+	// 调回master分支 ， 暂时删除 feature1 分支
+	$ git checkout master
+	$ git branch -d  feature1
+
+
 
 	```
 
