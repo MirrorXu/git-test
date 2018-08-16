@@ -280,7 +280,70 @@ $ git log --graph --oneline --abbrev-commit
 
 幸好，Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
 
+```js
+$ git status
+On branch xu
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.md
 
 
+$ git stash
+Saved working directory and index state WIP on xu: 0e1ddb0 merge from xu
 
+
+$ git status
+On branch xu
+nothing to commit, working tree clean
+
+```
+
+
+首先确定要在哪个分支上修复bug，假定需要在master分支上修复，就从master创建临时分支：
+
+```
+$ git checkout dev
+
+// 创建新的fix分支
+$ git checkout -b fix
+
+
+// 在fix分支上修复bug，然后commit
+
+$ git commit -a -m "fixed  bug"
+
+// 切换到dev分支，合并，删除fix分支
+
+$ git checkout dev
+
+$ git merge --no-ff -m "merged bug fix " fix
+
+$ git branch -d fix
+
+```
+
+回到dev分支继续自己的开发
+
+```js
+
+$ git checkout dev
+
+$ git status 
+On branch dev
+nothing to commit, working tree clean
+
+
+// 查看隐藏的工作现场
+$  git stash list 
+stash@{0}: WIP on xu: f52c633 add merge
+
+// 恢复工作现场
+$ git stash apply stash@{0}
+
+// 删除隐藏
+$ git stash drop
+
+```
 
