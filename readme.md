@@ -225,3 +225,38 @@
 	-	修改readme.md 并提交新的commit
 	`git commit -a -m "add merge" `
 
+-	切换回master,准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
+```
+$ git checkout master
+
+$ git merge --no-ff -m "merge with no-ff" dev
+```
+-	合并后，我们用`git log --graph --pretty=oneline --abbrev-commit`看看分支历史：
+
+```
+$ git log --graph --oneline --abbrev-commit
+
+*   4341b5b (HEAD -> master) merge with no-ff
+|\
+| * 3d48cf6 (dev) add merge
+|/
+* fe16e23 再次commit master
+* d20dad7  ddd
+* 44873b8 解决冲突学习完成
+* 48eb6c3 update readme.md
+*   e648320 fixed conflict
+|\
+| * 4b39867 update notes in readme.md
+* | 706a25f update readme.md in branch master
+|/
+* aa9cf3a 开始学习解决分支之间的冲突
+* 9a13418 (origin/master) readme.md  新增小结
+* 7b21023 add some new notes  to readme.md
+* a494646 在dev 分支上readme.md 文件中新增添了一些内容
+* b6b63a6 edit readme.md in dev branch
+
+...
+
+```
+
+
