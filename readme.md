@@ -350,6 +350,7 @@ $ git stash drop
 
 `git stash pop`，恢复的同时把stash内容也删除.
 
+<<<<<<< HEAD
 
 
 
@@ -361,3 +362,5 @@ $ git stash drop
 
 
 ##  git log  会变吗？
+=======
+>>>>>>> xu
