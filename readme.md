@@ -357,3 +357,7 @@ $ git stash drop
 
 
 ## new messge
+
+
+
+##  git log  会变吗？
