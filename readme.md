@@ -350,15 +350,3 @@ $ git stash drop
 
 `git stash pop`，恢复的同时把stash内容也删除.
 
-
-
-## add some new notes
-
-## now is at aaa branch
-
-## 11111
-
-## 22222
-
-## 333 aaa
-## 444 dev
