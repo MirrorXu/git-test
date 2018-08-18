@@ -351,10 +351,5 @@ $ git stash drop
 `git stash pop`，恢复的同时把stash内容也删除.
 
 
-## 完成临时bug修复
-
-## stash 
-
-
-## stash
+## 新的修改
 
